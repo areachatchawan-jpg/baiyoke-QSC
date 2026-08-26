@@ -36,3 +36,4 @@ function switchTab(tabName) {
     btn.classList.add('active');
   }
 }
+
