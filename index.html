@@ -165,19 +165,53 @@
                 </div>
             </form>
         </section>
+<section id="dashboard" class="tab-content">
+    <h2>📊 รายงานผลการตรวจสอบ</h2>
+    
+    <div class="dashboard-stats">
+        <div class="stat-card">
+            <div class="stat-label">รวมบันทึก</div>
+            <div class="stat-value" id="total-records">0</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-label">คะแนนเฉลี่ย</div>
+            <div class="stat-value" id="avg-score">0</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-label">สูงสุด</div>
+            <div class="stat-value" id="max-score">0</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-label">ต่ำสุด</div>
+            <div class="stat-value" id="min-score">0</div>
+        </div>
+    </div>
 
-        <section id="dashboard" class="tab-content" style="display:none;">
-            <h2>📊 รายงานผลการตรวจสอบ</h2>
-            <div class="dashboard-placeholder">
-                <p>📈 Dashboard จะแสดง:</p>
-                <ul>
-                    <li>สถิติคะแนน (ต่ำสุด, สูงสุด, เฉลี่ย)</li>
-                    <li>กราฟแสดงแนวโน้ม</li>
-                    <li>รายการบันทึกทั้งหมด</li>
-                </ul>
-                <p><em>(ส่วนนี้จะเขียน JavaScript ต่อในขั้นถัดไป)</em></p>
-            </div>
-        </section>
+    <div class="export-buttons" style="margin: 30px 0; text-align: center;">
+        <button class="btn btn-submit" onclick="exportToJSON()" style="flex: none; width: 200px; margin: 0 10px;">📥 Export JSON</button>
+        <button class="btn btn-submit" onclick="exportToCSV()" style="flex: none; width: 200px; margin: 0 10px;">📊 Export CSV</button>
+    </div>
+
+    <div class="records-table">
+        <h3>📋 รายการบันทึกทั้งหมด</h3>
+        <table id="records-table">
+            <thead>
+                <tr>
+                    <th>วันที่</th>
+                    <th>ผู้ตรวจสอบ</th>
+                    <th>สาขา</th>
+                    <th>คะแนนเฉลี่ย</th>
+                    <th>การจัดการ</th>
+                </tr>
+            </thead>
+            <tbody id="records-tbody">
+            </tbody>
+        </table>
+        <p id="no-records" style="text-align: center; color: #999; padding: 20px;">ยังไม่มีบันทึกการตรวจสอบ</p>
+    </div>
+</section>
+
+        
     </main>
 
     <footer class="footer">
