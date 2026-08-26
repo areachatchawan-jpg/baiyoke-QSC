@@ -9,7 +9,9 @@
 <body>
     <header class="header">
         <div class="header-content">
-            <div class="logo">🏨</div>
+            <div class="logo">
+  <img src="https://raw.githubusercontent.com/areachatchawan-jpg/bayoke-QSC/main/Bayoke%20LOGO.jpg" alt="Bayoke" style="height: 60px; width: auto;">
+</div>
             <h1 class="title">BAYOKE SKY HOTEL</h1>
             <h2 class="subtitle">BANGKOK</h2>
             <h3 class="tagline">Restaurant QSC Inspection System</h3>
@@ -21,7 +23,7 @@
         <nav class="nav-tabs">
             <button class="tab-button active" data-tab="inspection">📋 Inspection</button>
             <button class="tab-button" data-tab="dashboard">📊 Dashboard</button>
-        </nav>
+       <button class="tab-button" data-tab="settings">⚙️ Settings</button> </nav>
 
         <section id="inspection" class="tab-content active">
             <h2>📋 ตรวจสอบคุณภาพห้องอาหาร</h2>
@@ -210,7 +212,16 @@
         <p id="no-records" style="text-align: center; color: #999; padding: 20px;">ยังไม่มีบันทึกการตรวจสอบ</p>
     </div>
 </section>
-
+<section id="settings" class="tab-content">
+    <h2>⚙️ ตั้งค่าระบบ</h2>
+    
+    <div class="settings-section">
+        <h3>📝 จัดการสาขา</h3>
+        <div id="branches-list"></div>
+        <input type="text" id="new-branch" placeholder="ชื่อสาขาใหม่">
+        <button onclick="addBranch()" class="btn btn-submit" style="flex: none; width: 150px;">+ เพิ่มสาขา</button>
+    </div>
+</section>
         
     </main>
 
